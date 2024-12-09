@@ -6,7 +6,7 @@ use App\Models\Task;
 use Illuminate\Http\Request;
 
 
-Route::view('/tasks/create', 'create')->name('tesks.create');
+Route::view('/tasks/create', 'create')->name('tasks.create');
 
 Route::get('/tasks/{task}/edit', function (Task $task)  {
 
@@ -56,6 +56,11 @@ Route::delete('/tasks/{task}', function (Task $task) {
     return redirect()->route('tasks.index')
         ->with('success','Task deleted cuccessfully');
 })->name('tasks.destroy');
+
+Route::put('tasks/{task}/toggle-complete', function (Task $task) {
+    $task->toggleComplete();
+    return redirect()->back()->with('success','Task updated successfully');
+})->name('tasks.toggle-complete');
 
 Route::fallback(function () {
     return 'skere';
