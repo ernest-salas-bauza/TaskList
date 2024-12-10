@@ -26,7 +26,7 @@ This is a simple **Task List** application built as part of the [Laravel Beginne
 ## **Setup Instructions**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Esalas-refineriaweb/LaravelTest.git
+   git clone https://github.com/ernest-salas-bauza/TaskList.git
    ```
 2. Install dependencies:
    ```bash
